@@ -1,0 +1,20 @@
+{% extends 'homepage.html' %}
+{% block addcss %}
+<link rel="stylesheet" href="{{url_for('static',filename='addnotes.css')}}">
+{% endblock %}
+{% block content %}
+<br>
+    <div class="container">
+        <h1>view notes</h1>
+        <form methods="post">
+            <label for="titleField">Title:</label>
+            <input type="text" id="titleField" value="{{title}}"  name="title" />
+
+            <label for="contentField">Content:</label>
+            <textarea id="contentField" class="content-field" name="content">{{content}}</textarea>
+
+         
+            <button type="submit">Submit</button>
+        </form>
+</div>
+{% endblock %}
